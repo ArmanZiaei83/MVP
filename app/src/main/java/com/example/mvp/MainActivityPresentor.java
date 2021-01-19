@@ -13,7 +13,7 @@ public class MainActivityPresentor implements loginAction.presntor {
     @Override
     public void checkInfo(String email, String password) {
         if (email.equals("arman@gmail.com") && password.equals("arman")){
-           view.onSuccess("Welocome Arman");
+           view.onSuccess("Welcome Arman");
         }else {
             view.onError("Invaild Email or Password");
         }
