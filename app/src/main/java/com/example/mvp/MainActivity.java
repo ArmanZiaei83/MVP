@@ -23,7 +23,14 @@ public class MainActivity extends AppCompatActivity implements view {
         email = (EditText) findViewById(R.id.email);
         password = (EditText) findViewById(R.id.password);
         Button loginBtn = (Button) findViewById(R.id.btn_login);
+        Button singInBtn = (Button) findViewById(R.id.sign_in);
 
+        singInBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                
+            }
+        });
         mainActivityPresentor = new MainActivityPresentor(this);
 
         loginBtn.setOnClickListener(new View.OnClickListener() {
