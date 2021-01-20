@@ -2,6 +2,7 @@ package com.example.mvp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -28,7 +29,9 @@ public class MainActivity extends AppCompatActivity implements view {
         singInBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                
+
+                Intent toSignIn = new Intent(MainActivity.this , SingIn.class);
+                startActivity(toSignIn);
             }
         });
         mainActivityPresentor = new MainActivityPresentor(this);
