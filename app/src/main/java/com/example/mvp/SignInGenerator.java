@@ -11,6 +11,5 @@ public interface SignInGenerator {
     interface singInPresentor{
 
         void getInfo(String name , String email , String password);
-        
     }
 }
