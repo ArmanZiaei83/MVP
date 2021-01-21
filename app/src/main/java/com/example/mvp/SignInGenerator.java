@@ -1,5 +1,7 @@
 package com.example.mvp;
 
+import android.content.Context;
+
 public interface SignInGenerator {
 
     interface view{
@@ -10,6 +12,6 @@ public interface SignInGenerator {
 
     interface singInPresentor{
 
-        void getInfo(String name , String email , String password);
+        void getInfo(String name , String email , String password, Context context);
     }
 }

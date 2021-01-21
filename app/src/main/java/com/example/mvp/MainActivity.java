@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
+import android.content.Context;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -16,11 +17,13 @@ public class MainActivity extends AppCompatActivity implements view {
 
     public EditText email, password;
     MainActivityPresentor mainActivityPresentor;
+    Context context;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        context = MainActivity.this;
         email = (EditText) findViewById(R.id.email);
         password = (EditText) findViewById(R.id.password);
         Button loginBtn = (Button) findViewById(R.id.btn_login);
@@ -30,7 +33,7 @@ public class MainActivity extends AppCompatActivity implements view {
             @Override
             public void onClick(View v) {
 
-                Intent toSignIn = new Intent(MainActivity.this , SingIn.class);
+                Intent toSignIn = new Intent(context , SingIn.class);
                 startActivity(toSignIn);
             }
         });
